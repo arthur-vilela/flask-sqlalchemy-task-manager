@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Materialize CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-        type="text/css">
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
         integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-    <title>Document</title>
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        type="text/css">
+    <title>Task Manager</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
 </head>
 
@@ -19,10 +19,10 @@
 
     <header>
         <!-- Top navbar -->
-        <nav>
+        <nav class="light-blue darken-1>
             <div class="nav-wrapper">
                 <a href="#!" class="brand-logo">Task Manager</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars">menu</i></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('home') }}.html">Home</a></li>
                     <li><a href="{{ url_for('home') }}.html">New Task</a></li>
@@ -39,18 +39,12 @@
     </header>
     <main class="container">
         {% block content %}
-        {% endbloc %}
+        {% endblock %}
     </main>
-    <footer class="page-footer blue-darken-3">
+    <footer class="page-footer blue darken-3">
         <div class="footer-copyright">
             <div class="container">
                 For educational purposes only
-
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                © 2014 Copyright Text
                 <a class="white-text right" href="https://codeinstitute.net" target="_blank">&copy; Code Institute</a>
             </div>
         </div>
